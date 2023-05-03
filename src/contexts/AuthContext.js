@@ -13,7 +13,19 @@ export function AuthProvider(props) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(false);
+    (async () => {
+      const token = tokenCtrl.getToken();
+      if (!token) {
+        logout();
+        setLoading(false);
+        return;
+      }
+      if (tokenCtrl.hasExpiredToken(token)) {
+        logout();
+      } else {
+        await login(token);
+      }
+    })();
   }, []);
 
   const login = async (token) => {
@@ -29,12 +41,27 @@ export function AuthProvider(props) {
     }
   };
 
+  const logout = () => {
+    if (token) {
+      tokenCtrl.removeToken();
+      setUser(null);
+      setToken(null);
+    }
+  };
+
+  const updateUser = (key, value) => {
+    setUser({
+      ...user,
+      [key]: value,
+    });
+  };
+
   const data = {
     accessToken: token,
     user,
     login,
-    logout: null,
-    updateUser: null,
+    logout,
+    updateUser,
   };
 
   if (loading) return null;

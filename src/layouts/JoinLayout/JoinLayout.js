@@ -11,7 +11,10 @@ export function JoinLayout(props) {
   const { children } = props;
   const { user } = useAuth();
 
-  if (user) router.push("/");
+  if (user) {
+    router.push("/");
+    return null;
+  }
 
   return (
     <div className={styles.container}>
