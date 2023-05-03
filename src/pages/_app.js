@@ -1,5 +1,18 @@
-import '@/styles/globals.css'
+import "semantic-ui-css/semantic.min.css";
+import "@/scss/global.scss";
+import { AuthProvider } from "@/contexts";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import { config } from "@fortawesome/fontawesome-svg-core";
+
+config.autoAddCss = false;
+
+export default function App(props) {
+  const { Component, pageProps } = props;
+
+  return (
+    <AuthProvider>
+      <Component {...pageProps} />
+    </AuthProvider>
+  );
 }

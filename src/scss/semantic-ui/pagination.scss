@@ -1,0 +1,18 @@
+.ui.pagination {
+    border-color: $default-green;
+    background-color: $white;
+  
+    > .item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $default-green;
+  
+      &.active,
+      &:focus,
+      &:hover {
+        background-color: $medium-green !important;
+        color: $white !important;
+      }
+    }
+  }

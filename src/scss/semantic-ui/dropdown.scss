@@ -1,0 +1,39 @@
+.ui.selection.dropdown.number {
+    background-color: $medium-green;
+    border-radius: 5px !important;
+  
+    &.visible.active {
+      border-color: $default-green;
+    }
+  
+    .divider.text {
+      color: $default-green;
+    }
+  
+    .visible.menu.transition {
+      background-color: $medium-green;
+      margin-top: 10px;
+      border-radius: 6px;
+      border: 0;
+  
+      &::-webkit-scrollbar {
+        display: none;
+      }
+  
+      .item {
+        border: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+        &:hover,
+        &.active {
+          background-color: $default-green;
+        }
+  
+        .text {
+          margin: 0;
+        }
+      }
+    }
+  }
