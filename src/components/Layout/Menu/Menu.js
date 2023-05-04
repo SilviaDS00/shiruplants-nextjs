@@ -31,11 +31,13 @@ export function Menu(props) {
   return (
     <div>
       <div className={styles.categories}>
+        <Link href="/">Inicio</Link>
         <button className={styles.products} onClick={handlePanelClick}>
           Productos
           <i class="angle down icon" />
         </button>
         <Link href="/blog">Blog</Link>
+        <Link href="/blog">Foro</Link>
         <Link href="/contact">Contacto</Link>
       </div>
       {showPanel && (
@@ -48,6 +50,7 @@ export function Menu(props) {
               {category.attributes.title}
             </Link>
           ))}
+          <Link href={`/products/`}>Ver todo...</Link>
         </div>
       )}
     </div>
