@@ -1,0 +1,37 @@
+@import "~src/scss/index.scss";
+
+.categories{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 2rem;
+    
+    > a {
+        color: $white;
+        font-size: 1.2rem;
+    }
+    > i{
+        color: $white;
+        font-size: 1rem;
+    }
+}
+.products{
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.panel{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    position: absolute;
+    top: 5.3rem;
+    background-color: white;
+    border: 1px solid $dark-green;
+    padding: 2rem;
+}
