@@ -1,5 +1,4 @@
 import * as styles from "./Menu.module.scss";
-import { Image, Icon, Input, Button } from "semantic-ui-react";
 import { useEffect, useState } from "react";
 import { Category } from "@/api";
 import { map } from "lodash";
@@ -8,11 +7,9 @@ import Link from "next/link";
 const categoryCtrl = new Category();
 
 export function Menu(props) {
-  const { isOpenSearch } = props;
   const [categories, setCategories] = useState(null);
   const [showPanel, setShowPanel] = useState(false);
 
-  console.log(categories);
   useEffect(() => {
     (async () => {
       try {
@@ -34,7 +31,7 @@ export function Menu(props) {
         <Link href="/">Inicio</Link>
         <button className={styles.products} onClick={handlePanelClick}>
           Productos
-          <i class="angle down icon" />
+          <i className="angle down icon" />
         </button>
         <Link href="/blog">Blog</Link>
         <Link href="/blog">Foro</Link>

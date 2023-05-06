@@ -1,3 +1,5 @@
+@import "~src/scss/index.scss";
+
 .header {
     width: 100%;
     height: auto;
@@ -32,7 +34,7 @@
   margin-bottom: 4rem;
 }
 
-.contenedorIconos{
+.contenedorInput{
   width: 40rem;
   border: 1px solid #e1e2e6;
   background-color: white;
@@ -41,17 +43,28 @@
   justify-content: center;
   align-items: center;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
+  > i {
+    color: #5F6B5A;
+  font-size: 1rem;
+  }
 
-.searchInput{
-  padding-left: 10px;
-  width: 35rem;
-  height: 3rem;
-  border: none;
-  outline: none;
-  color: #5F6B5A;
+  .searchInput{
+    width: 35rem;
+    height: 3rem;
+    overflow: hidden;
+    border-radius: 4rem;
+    border: none;
+
+    > input{
+      background-color: white !important;
+      border: 0 !important;
+      color: $medium-green !important;
+      font-size: 1.5rem;
+    }
+  }
 }
 
 .icon{
-  color: #5F6B5A;
+  color: $medium-green;
+  font-size: 2rem;
 }

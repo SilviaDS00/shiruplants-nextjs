@@ -2,19 +2,19 @@
     border-bottom: 2px solid $default-green;
   
     a.item {
-      color: $white;
+      color: $default-green;
       font-weight: bold !important;
   
       &:hover,
       &:active,
       &:focus {
-        color: $default-green !important;
-        border-color: $default-green !important;
+        color: $medium-green !important;
+        border-color: $medium-green !important;
       }
   
       &.active {
-        color: $default-green;
-        border-color: $default-green;
+        color: $medium-green;
+        border-color: $medium-green;
       }
   
       > i {
@@ -26,4 +26,5 @@
   .ui.tab.segment.active {
     background-color: transparent;
     padding: 20px 0 0 0;
+    border: none;
   }

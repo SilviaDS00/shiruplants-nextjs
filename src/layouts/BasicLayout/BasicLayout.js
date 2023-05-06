@@ -1,7 +1,7 @@
 import * as styles from "./BasicLayout.module.scss";
 import { Container } from "semantic-ui-react";
 import classNames from "classnames";
-import { TopBar } from "@/components/Layout";
+import { TopBar, Footer } from "@/components/Layout";
 
 export function BasicLayout(props) {
   const {
@@ -20,7 +20,7 @@ export function BasicLayout(props) {
         </div>
       </Container>
 
-      {/* TODO: Footer */}
+      <Footer />
     </>
   );
 }

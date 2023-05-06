@@ -9,12 +9,12 @@ export function Search() {
       <h1>Todos tus productos de jardinería a tu alcance</h1>
       <h2>Las mejores marcas al mejor precio</h2>
       <section className={styles.buscador}>
-        <div className={styles.contenedorIconos}>
+        <div className={styles.contenedorInput}>
           <FontAwesomeIcon icon={faSearch} className={styles.icon} />
           <Input
             className={styles.searchInput}
             type="text"
-            placeholder="Buscar productos, marcas y más..."
+            placeholder="Buscar productos..."
           />
         </div>
       </section>
