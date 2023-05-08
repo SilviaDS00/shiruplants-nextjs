@@ -5,7 +5,7 @@ import { Input } from "semantic-ui-react";
 
 export function Search() {
   return (
-    <h1 className={styles.header}>
+    <div className={styles.header}>
       <h1>Todos tus productos de jardinería a tu alcance</h1>
       <h2>Las mejores marcas al mejor precio</h2>
       <section className={styles.buscador}>
@@ -18,6 +18,6 @@ export function Search() {
           />
         </div>
       </section>
-    </h1>
+    </div>
   );
 }

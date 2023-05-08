@@ -42,7 +42,7 @@ export function ChangeNameForm() {
           error={formik.errors.lastname}
         />
         <Form.Button type="submit" loading={formik.isSubmitting}>
-          Enviar
+          Cambiar
         </Form.Button>
       </div>
     </Form>
