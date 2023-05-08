@@ -1,0 +1,44 @@
+@import "~/src/scss/index.scss";
+
+.barTrust {
+  width: 100%;
+  background-color: $default-green;
+}
+
+.content {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 40px 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  border-right: 1px solid $white;
+
+  &:last-of-type {
+    border: 0;
+  }
+
+  i {
+    font-size: 2.3rem;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+  }
+
+  span {
+    font-size: 1rem;
+    color: $white;
+  }
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+}

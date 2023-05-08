@@ -1,0 +1,12 @@
+@import "~/src/scss/index.scss";
+
+.container {
+  display: flex;
+  position: relative;
+
+
+.containerImage {
+  display: flex !important;
+  justify-content: flex-end;
+}
+}
