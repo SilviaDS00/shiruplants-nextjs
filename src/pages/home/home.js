@@ -33,7 +33,7 @@ export default function HomePage() {
           />
           <Separator height={20} />
           <Button>
-            <Link href="/">Ver más...</Link>
+            <Link href="/products/plantas-de-interior">Ver más...</Link>
           </Button>
           <Separator height={50} />
           <Home.LatestProducts
@@ -43,7 +43,7 @@ export default function HomePage() {
           />
           <Separator height={20} />
           <Button>
-            <Link href="/">Ver más...</Link>
+            <Link href="/products/plantas-de-jardin">Ver más...</Link>
           </Button>
           <Separator height={50} />
 
@@ -57,7 +57,7 @@ export default function HomePage() {
           />
           <Separator height={20} />
           <Button>
-            <Link href="/">Ver más...</Link>
+            <Link href="/products/sustratos">Ver más...</Link>
           </Button>
           <Separator height={50} />
           <Home.LatestProducts
@@ -67,7 +67,7 @@ export default function HomePage() {
           />
           <Separator height={20} />
           <Button>
-            <Link href="/">Ver más...</Link>
+            <Link href="/products/abonos-y-fertilizantes">Ver más...</Link>
           </Button>
         </Container>
 

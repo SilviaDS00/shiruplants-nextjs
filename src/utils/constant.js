@@ -10,6 +10,7 @@ export const ENV = {
     USERS: "users",
     CATEGORIES: "categories",
     PRODUCT: "products",
+    WISHLISTS: "wishlists",
   },
   TOKEN: "token",
 };

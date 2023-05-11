@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const categoryCtrl = new Category();
 
-export function Menu(props) {
+export function Menu() {
   const [categories, setCategories] = useState(null);
   const [showPanel, setShowPanel] = useState(false);
 

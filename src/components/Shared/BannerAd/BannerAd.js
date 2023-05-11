@@ -1,5 +1,5 @@
 import * as styles from "./BannerAd.module.scss";
-import { Button, Container, Image } from "semantic-ui-react";
+import { Container, Image } from "semantic-ui-react";
 import Link from "next/link";
 
 export function BannerAd(props) {

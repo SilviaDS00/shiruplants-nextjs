@@ -1,0 +1,12 @@
+@import "~/src/scss/index.scss";
+
+.summary{
+    width: 50%;
+    padding: 1rem 1rem 1rem 0;
+
+    p{
+        color: $dark-green;
+        line-height: 2rem;
+    }
+}
+

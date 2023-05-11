@@ -14,6 +14,7 @@ export class Category {
       throw error;
     }
   }
+
   async getBySlug(slug) {
     try {
       const filters = `filters[slug][$eq]=${slug}`;

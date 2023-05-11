@@ -14,7 +14,7 @@ export function TopBar(props) {
         Shiruplants
       </Link>
       <div className={styles.center}>
-        <Menu isOpenSearch={isOpenSearch} />
+        <Menu />
       </div>
       <div className={styles.right}>
         <Account />

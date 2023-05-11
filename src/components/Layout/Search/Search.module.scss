@@ -1,7 +1,7 @@
 @import "~src/scss/index.scss";
 
 .header {
-    width: 100%;
+    width: 100vw;
     height: auto;
     background-color: #9DB195;
     display: flex;
@@ -35,7 +35,7 @@
 }
 
 .contenedorInput{
-  width: 40rem;
+  width: 50%;
   border: 1px solid #e1e2e6;
   background-color: white;
   border-radius: 4rem;
@@ -49,7 +49,7 @@
   }
 
   .searchInput{
-    width: 35rem;
+    width: 90%;
     height: 3rem;
     overflow: hidden;
     border-radius: 4rem;

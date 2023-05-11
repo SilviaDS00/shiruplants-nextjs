@@ -1,7 +1,12 @@
 import { BasicLayout, SearchLayout } from "@/layouts";
 import { Container } from "semantic-ui-react";
 import { size } from "lodash";
-import { GridProducts, Separator } from "@/components/Shared";
+import {
+  GridProducts,
+  Separator,
+  Pagination,
+  NoResult,
+} from "@/components/Shared";
 import { useEffect } from "react";
 
 export default function SearchPage(props) {
@@ -21,12 +26,17 @@ export default function SearchPage(props) {
             <>
               <GridProducts products={products} />
               <Separator height={30} />
+              <Pagination
+                currentPage={pagination.page}
+                totalPage={pagination.pageCount}
+              />
             </>
           ) : (
             <div>
-              <h3>No se encontraron resultados</h3>
+              <NoResult text="No se encontraron resultados" />
             </div>
           )}
+          <Separator height={100} />
         </Container>
       </BasicLayout>
     </>
