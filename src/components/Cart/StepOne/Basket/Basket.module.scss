@@ -1,0 +1,74 @@
+@import "~/src/scss/index.scss";
+
+.basket {
+  > h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+}
+
+.block {
+  background-color: $white;
+  width: 100%;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product {
+  display: flex;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $default-green;
+
+  &:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  > img {
+    width: 20rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+
+  > div {
+    display: flex;
+    width: 100%;
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 10px 0;
+      width: 100%;
+
+      p {
+        &:first-of-type {
+          font-weight: bold;
+        }
+        &:last-of-type {
+          color: $medium-green;
+          font-size: 12px;
+        }
+      }
+
+      i:hover {
+        color: $default-green;
+      }
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-left: 10px;
+        font-weight: bold;
+      }
+    }
+  }
+}

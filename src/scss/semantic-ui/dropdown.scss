@@ -1,17 +1,17 @@
 .ui.selection.dropdown.number {
-    background-color: $medium-green;
+    background-color: $light-green;
     border-radius: 5px !important;
   
     &.visible.active {
-      border-color: $default-green;
+      border-color: $medium-green;
     }
   
     .divider.text {
-      color: $default-green;
+      color: $medium-green;
     }
   
     .visible.menu.transition {
-      background-color: $medium-green;
+      background-color: $light-green;
       margin-top: 10px;
       border-radius: 6px;
       border: 0;

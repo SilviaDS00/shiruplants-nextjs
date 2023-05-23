@@ -1,26 +1,37 @@
 import { BasicLayout } from "@/layouts";
 import { useRouter } from "next/router";
-import { Info, Settings, Wishlist } from "@/components/Account";
+import {
+  Info,
+  Settings,
+  Wishlist,
+  Orders,
+  Address,
+} from "@/components/Account";
 import { Tab } from "semantic-ui-react";
 import * as styles from "./account.module.scss";
 import { useAuth } from "@/hooks";
 import { Separator } from "@/components/Shared";
+import { useState } from "react";
 
 export default function account() {
   const { logout, user } = useAuth();
   const router = useRouter();
+  const [reload, setReload] = useState(false);
 
   if (!user) {
     router.push("/");
     return null;
   }
 
+  const onReload = () => setReload((prevState) => !prevState);
+
   const panes = [
     {
       menuItem: "Mis pedidos",
       render: () => (
         <Tab.Pane attached={false}>
-          <p className={styles.text}>Mis pedidos</p>
+          <Orders />
+          <Separator height={80} />
         </Tab.Pane>
       ),
     },
@@ -37,7 +48,9 @@ export default function account() {
       menuItem: "Direcciones",
       render: () => (
         <Tab.Pane attached={false}>
-          <p className={styles.text}>Direcciones</p>
+          <Address.AddAddress onReload={onReload} />
+          <Address.ListAddresses reload={reload} onReload={onReload} />
+          <Separator height={80} />
         </Tab.Pane>
       ),
     },
