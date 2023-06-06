@@ -11,9 +11,9 @@ export function initialValues() {
 //Validacion del formulario
 export function validationSchema() {
   return Yup.object({
-    email: Yup.string().email(true).required(true),
-    username: Yup.string().required(true),
-    name: Yup.string().required(true),
-    password: Yup.string().required(true),
+    email: Yup.string().email(true).required("Debes introducir un email"),
+    username: Yup.string().required("Debes intruducir un usuario"),
+    name: Yup.string().required("Introduce un nombre"),
+    password: Yup.string().required("Introduce una contraseña"),
   });
 }

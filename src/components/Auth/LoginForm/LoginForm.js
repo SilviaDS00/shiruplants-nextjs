@@ -1,6 +1,5 @@
-import { Form } from "semantic-ui-react";
+import { Form, Message } from "semantic-ui-react";
 import { useFormik } from "formik";
-import { useRouter } from "next/router";
 import { initialValues, validationSchema } from "./LoginForm.form";
 import { useAuth } from "@/hooks";
 import { Auth } from "@/api";
@@ -8,8 +7,6 @@ import { Auth } from "@/api";
 const authCtrl = new Auth();
 
 export function LoginForm() {
-  const router = useRouter();
-
   const { login } = useAuth();
 
   const formik = useFormik({
@@ -20,23 +17,27 @@ export function LoginForm() {
       try {
         const response = await authCtrl.login(formValue);
         login(response.jwt);
-        //router.push("/");
       } catch (error) {
+        formik.setStatus("Correo o contraseña incorrectos");
         console.log(error);
       }
     },
   });
+
   return (
     <Form onSubmit={formik.handleSubmit}>
+      {formik.status && <Message negative content={formik.status} />}
+
       <Form.Input
         fluid
         name="identifier"
         type="text"
-        placeholder="Correo electronico o nombre de usuario"
+        placeholder="Correo electrónico o nombre de usuario"
         value={formik.values.identifier}
         onChange={formik.handleChange}
-        error={formik.errors.identifier}
+        error={formik.errors.identifier ? true : false}
       />
+
       <Form.Input
         fluid
         name="password"
@@ -44,8 +45,9 @@ export function LoginForm() {
         placeholder="Contraseña"
         value={formik.values.password}
         onChange={formik.handleChange}
-        error={formik.errors.password}
+        error={formik.errors.password ? true : false}
       />
+
       <Form.Button type="submit" fluid loading={formik.isSubmitting}>
         Entrar
       </Form.Button>

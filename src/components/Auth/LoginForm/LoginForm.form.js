@@ -9,7 +9,7 @@ export function initialValues() {
 
 export function validationSchema() {
   return Yup.object({
-    identifier: Yup.string().required(true),
-    password: Yup.string().required(true),
+    identifier: Yup.string().required("Introduce tu correo electrónico"),
+    password: Yup.string().required("Introduce tu contraseña"),
   });
 }
