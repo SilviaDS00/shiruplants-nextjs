@@ -10,7 +10,6 @@ export default function ProductPage(props) {
       <BasicLayout>
         <Container>
           <Separator height={100} />
-          <h2>ProductPage</h2>
           <Separator height={50} />
           <Product.Panel productId={product.id} product={product} />
           <Separator height={50} />
